@@ -9,6 +9,6 @@ pipeline = Pipeline.from_pretrained(
     "pyannote/speaker-diarization-3.1",
     use_auth_token="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",
 )
-pipline.to(torch.device("cuda"))
+pipeline.to(torch.device("cuda"))
 diarization_result = pipeline("data/afjiv.wav")
 print(f"end {datetime.now()}")
